@@ -33,3 +33,5 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Hello World
       run: echo Hello World
+    - name: Run test
+      uses: ./.github/actions/kuromoji_test
