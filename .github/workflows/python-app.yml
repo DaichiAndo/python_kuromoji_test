@@ -34,4 +34,4 @@ jobs:
     - name: Hello World
       run: echo Hello World
     - name: Run test
-      uses: ./.github/actions/kuromoji_test
+      run: python ./.github/test/script.py
