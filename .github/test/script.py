@@ -6,6 +6,9 @@ path = os.path.abspath('test.txt')
 # 一つ目の要素を追加する配列
 brand_list = []
 
+class Error(Exception):
+    pass
+
 # ブランド名の重複を確認する関数
 def has_duplicates(seq):
     return len(seq) != len(set(seq))
@@ -20,8 +23,9 @@ for line in lines:
     # 要素数を取得し、要素数が４つあるのかを確認：チェックポイント①
     elements = line.split(',')
     if len(elements) != 4:
-      print('要素数が違います')
-      break
+      raise Error('要素数が違います')
+      # print('要素数が違います')
+      # break
     
     # ４つ目以外の各要素内のダブルクォートの数を確認：チェックポイント①
 
