@@ -18,7 +18,7 @@ f = open(path)
 lines = f.readlines()
 for line in lines:
     # 改行を削除
-    line = line.replace("\n", "")
+                  line = line.replace("\n", "")
 
     # 要素数を取得し、要素数が４つあるのかを確認：チェックポイント①
     elements = line.split(',')
