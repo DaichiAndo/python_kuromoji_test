@@ -29,7 +29,7 @@ for line in lines:
         raise Error('要素数が違います')
         # print('要素数が違います')
         # break
-    
+
     # ４つ目以外の各要素内のダブルクォートの数を確認：チェックポイント①
 
     elements_one = elements[0]
