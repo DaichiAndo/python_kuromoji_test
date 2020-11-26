@@ -25,7 +25,7 @@ for line in lines:
 
     # 要素数を取得し、要素数が４つあるのかを確認：チェックポイント①
     elements = line.split(',')
-    if len(elements) != 4:
+    if len(elements) != 4:::
         raise Error('要素数が違います')
         # print('要素数が違います')
         # break
