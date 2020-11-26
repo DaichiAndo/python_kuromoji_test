@@ -23,9 +23,9 @@ for line in lines:
     # 要素数を取得し、要素数が４つあるのかを確認：チェックポイント①
     elements = line.split(',')
     if len(elements) != 4:
-      raise Error('要素数が違います')
-      # print('要素数が違います')
-      # break
+        raise Error('要素数が違います')
+        # print('要素数が違います')
+        # break
     
     # ４つ目以外の各要素内のダブルクォートの数を確認：チェックポイント①
 
@@ -33,8 +33,8 @@ for line in lines:
     elements_two = elements[1]
     elements_three = elements[2]
     if elements_one.count('"') != 2 or elements_two.count('"') != 2 or elements_three.count('"') != 2:
-      print('ダブルクォートの数が不適切です')
-      break
+        print('ダブルクォートの数が不適切です')
+        break
 
     # elements.remove('カスタム名詞-brand')
     # for element in elements:
@@ -44,8 +44,8 @@ for line in lines:
 
     # 空白数が一致しているかの確認：チェックポイント②
     if elements[1].count(' ') != elements[2].count(' '):
-      print('空白数が違います')
-      break
+        print('空白数が違います')
+        break
 
     # １つ目の要素を配列に追加
     brand_list.append(elements[0])
