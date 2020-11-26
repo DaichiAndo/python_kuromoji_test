@@ -6,12 +6,15 @@ path = os.path.abspath('test.txt')
 # 一つ目の要素を追加する配列
 brand_list = []
 
+
 class Error(Exception):
     pass
+
 
 # ブランド名の重複を確認する関数
 def has_duplicates(seq):
     return len(seq) != len(set(seq))
+
 
 # ファイルを一行ずつ読み込み
 f = open(path)
