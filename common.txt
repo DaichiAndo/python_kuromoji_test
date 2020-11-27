@@ -1,4 +1,5 @@
 "糸衣","糸衣","イトイ",カスタム名詞-brand
+"糸衣","糸衣","イトイ",カスタム名詞-brand
 "BAUM UND PFERDGARTEN","BAUM UND PFERDGARTEN","バウム ウンド ヘルガーテン",カスタム名詞-brand
 "SMELLS LIKE SPELLS","SMELLS LIKE SPELLS","スメルズ ライク スペルズ",カスタム名詞-brand
 "La soeur","La soeur","ラ スール",カスタム名詞-brand
@@ -7,5 +8,4 @@
 "Landscape Products","Landscape Products","ランドスケープ プロダクツ",カスタム名詞-brand
 "NAVAL WATCH","NAVAL WATCH","ナヴァル ウォッチ",カスタム名詞-brand
 "SOFIE D'HOORE","SOFIE D'HOORE","ソフィー ドール",カスタム名詞-brand
-"doinel","doinel","ドワネル",カスタム名詞-brand
 "doinel","doinel","ドワネル",カスタム名詞-brand

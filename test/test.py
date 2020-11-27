@@ -14,9 +14,7 @@ brand_list = []
 # ブランド名の重複を確認する関数
 def has_duplicates(seq):
     dup = [x for x in set(seq) if seq.count(x) > 1]
-    if dup != []:
-        print('重複しているブランド：' + str(dup))
-    return len(seq) != len(set(seq))
+    return len(seq) != len(set(seq)), dup
 
 
 # ユーザー定義例外
@@ -42,11 +40,11 @@ for line in lines:
     elements[2] = elements[2].lstrip('"')
 
     if len(elements) != 4:
-        raise Error('要素数が不適切です：　line ' + str(number_of_lines) + ' in common.txt')
+        raise Error('要素数が不適切です： line ' + str(number_of_lines) + ' in common.txt')
 
     # ４つ目以外の各要素内のダブルクォートの数を確認（ブランド名にダブルクォートが含まれていないか）：チェックポイント①-2
     if elements[0].count('"') != 0 or elements[1].count('"') != 0 or elements[2].count('"') != 0:
-        raise Error('ダブルクォートの数が不適切です：　line ' + str(number_of_lines) + ' in common.txt')
+        raise Error('ダブルクォートの数が不適切です： line ' + str(number_of_lines) + ' in common.txt')
 
     # 空白数が一致しているかの確認：チェックポイント②
     # ※末尾の空白はカウントしないため削除
@@ -57,7 +55,7 @@ for line in lines:
     elements[2] = re.sub(" +", " ", elements[2])
 
     if elements[1].count(' ') != elements[2].count(' '):
-        raise Error('空白数が不適切です：　line ' + str(number_of_lines) + ' in common.txt')
+        raise Error('空白数が不適切です： line ' + str(number_of_lines) + ' in common.txt')
 
     # １つ目の要素を配列に追加
     brand_list.append(elements[0])
@@ -66,7 +64,8 @@ for line in lines:
     # print(elements)
 
 # 一つ目の要素(ブランド名)に重複がないかの確認：チェックポイント③
-if has_duplicates(brand_list):
-    raise Error('ブランド名が重複しています')
+result = has_duplicates(brand_list)
+if result[0]:
+    raise Error('ブランド名が重複しています： ' + str(result[1]))
 else:
     print('テストをpassしました')
