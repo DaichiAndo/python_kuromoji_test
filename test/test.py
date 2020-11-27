@@ -39,13 +39,14 @@ for line in lines:
     elements[1] = elements[1].lstrip('"')
     elements[2] = elements[2].lstrip('"')
 
-    if len(elements) != 4:
-        print('要素数が不適切です @' + number_of_lines)
+    try:
+        len(elements) != 4:
         raise Error('要素数が不適切です')
-
+    except Error as e:
+        print(e)
+        
     # ４つ目以外の各要素内のダブルクォートの数を確認（ブランド名にダブルクォートが含まれていないか）：チェックポイント①-2
     if elements[0].count('"') != 0 or elements[1].count('"') != 0 or elements[2].count('"') != 0:
-        print('ダブルクォートの数が不適切です @' + number_of_lines)
         raise Error('ダブルクォートの数が不適切です')
 
     # 空白数が一致しているかの確認：チェックポイント②
@@ -57,7 +58,6 @@ for line in lines:
     elements[2] = re.sub(" +", " ", elements[2])
 
     if elements[1].count(' ') != elements[2].count(' '):
-        print('空白数が不適切です @' + number_of_lines)
         raise Error('空白数が不適切です')
 
     # １つ目の要素を配列に追加
@@ -65,10 +65,6 @@ for line in lines:
 
     # 開発用
     # print(elements)
-
-
-except Error as e:
-    print(e)
 
 # 一つ目の要素(ブランド名)に重複がないかの確認：チェックポイント③
 if has_duplicates(brand_list):
