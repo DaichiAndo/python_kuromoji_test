@@ -22,7 +22,7 @@ class Error(Exception):
         pass
 
     def __str__(self):
-        print "Hi I'm MyError!"
+        print("Hi MyError!")
 
 
 # ファイルを一行ずつ読み込み
