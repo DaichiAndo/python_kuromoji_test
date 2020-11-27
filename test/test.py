@@ -13,6 +13,9 @@ brand_list = []
 
 # ブランド名の重複を確認する関数
 def has_duplicates(seq):
+    dup = [x for x in set(seq) if seq.count(x) > 1]
+    if dup != []:
+        print('重複しているブランド：' + str(dup))
     return len(seq) != len(set(seq))
 
 

@@ -3,8 +3,9 @@
 "SMELLS LIKE SPELLS","SMELLS LIKE SPELLS","スメルズ ライク スペルズ",カスタム名詞-brand
 "La soeur","La soeur","ラ スール",カスタム名詞-brand
 "77Circa","77Circa","ナナナナサーカ",カスタム名詞-brand
-"LAURENCE BRAS","LAURENCE BRAS","ローレンスブラス",カスタム名詞-brand
+"LAURENCE BRAS","LAURENCE BRAS","ローレンス ブラス",カスタム名詞-brand
 "Landscape Products","Landscape Products","ランドスケープ プロダクツ",カスタム名詞-brand
 "NAVAL WATCH","NAVAL WATCH","ナヴァル ウォッチ",カスタム名詞-brand
 "SOFIE D'HOORE","SOFIE D'HOORE","ソフィー ドール",カスタム名詞-brand
+"doinel","doinel","ドワネル",カスタム名詞-brand
 "doinel","doinel","ドワネル",カスタム名詞-brand
