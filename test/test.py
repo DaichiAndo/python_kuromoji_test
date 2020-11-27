@@ -21,6 +21,7 @@ def has_duplicates(seq):
 class Error(Exception):
     pass
 
+
 # ファイルを一行ずつ読み込み
 f = open(path)
 lines = f.readlines()
