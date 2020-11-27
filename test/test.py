@@ -1,5 +1,6 @@
 import os
 import re
+import traceback
 
 # 読み込むファイルのパスを変数に追加
 path = os.path.abspath('common.txt')
@@ -40,7 +41,10 @@ for line in lines:
     elements[2] = elements[2].lstrip('"')
 
     if len(elements) != 4:
-        raise Error('要素数が不適切です')
+        try:
+            raise Error('要素数が不適切です')
+        except:
+            traceback.print_exc()
 
     # ４つ目以外の各要素内のダブルクォートの数を確認（ブランド名にダブルクォートが含まれていないか）：チェックポイント①-2
     if elements[0].count('"') != 0 or elements[1].count('"') != 0 or elements[2].count('"') != 0:
