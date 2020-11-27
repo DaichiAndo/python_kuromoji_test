@@ -19,7 +19,7 @@ def has_duplicates(seq):
 
 # ユーザー定義例外
 class Error(Exception):
-    pass
+    print('aaaaa')
 
 
 # ファイルを一行ずつ読み込み
@@ -41,10 +41,7 @@ for line in lines:
     elements[2] = elements[2].lstrip('"')
 
     if len(elements) != 4:
-        try:
-            raise Error('要素数が不適切です')
-        except:
-            traceback.print_exc()
+        raise Error('要素数が不適切です')
 
     # ４つ目以外の各要素内のダブルクォートの数を確認（ブランド名にダブルクォートが含まれていないか）：チェックポイント①-2
     if elements[0].count('"') != 0 or elements[1].count('"') != 0 or elements[2].count('"') != 0:
