@@ -4,7 +4,7 @@ name: Kuromoji-test
 on:
   push:
     branches:
-    - feature/Kuromoji-test
+    - main
   
 
 jobs:
