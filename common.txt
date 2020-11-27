@@ -7,4 +7,4 @@
 "Landscape Products","Landscape Products","ランドスケープ プロダクツ",カスタム名詞-brand
 "NAVAL WATCH","NAVAL WATCH","ナヴァル ウォッチ",カスタム名詞-brand
 "SOFIE D'HOORE","SOFIE D'HOORE","ソフィー ドール",カスタム名詞-brand
-"doinel","doinel","ドワネル",カスタム名詞-brand
+"doinel","doinel","ドワ ネル",カスタム名詞-brand
