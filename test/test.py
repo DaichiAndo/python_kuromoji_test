@@ -1,6 +1,5 @@
 import os
 import re
-import traceback
 
 # 読み込むファイルのパスを変数に追加
 path = os.path.abspath('common.txt')
@@ -19,7 +18,11 @@ def has_duplicates(seq):
 
 # ユーザー定義例外
 class Error(Exception):
-    print('aaaaa' + str(number_of_lines))
+    def __init__(self):
+        pass
+        
+    def __str__(self):
+        return "Hi I'm MyError!"
 
 
 # ファイルを一行ずつ読み込み
