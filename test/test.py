@@ -43,7 +43,7 @@ for line in lines:
 
     # ４つ目以外の各要素内のダブルクォートの数を確認（ブランド名にダブルクォートが含まれていないか）：チェックポイント①-2
     if elements[0].count('"') != 0 or elements[1].count('"') != 0 or elements[2].count('"') != 0:
-        raise Error('ダブルクォートの数が不適切です')
+        raise Error('ダブルクォートの数が不適切です：　line ' + str(number_of_lines) + ' in common.txt')
 
     # 空白数が一致しているかの確認：チェックポイント②
     # ※末尾の空白はカウントしないため削除
@@ -54,7 +54,7 @@ for line in lines:
     elements[2] = re.sub(" +", " ", elements[2])
 
     if elements[1].count(' ') != elements[2].count(' '):
-        raise Error('空白数が不適切です')
+        raise Error('空白数が不適切です：　line ' + str(number_of_lines) + ' in common.txt')
 
     # １つ目の要素を配列に追加
     brand_list.append(elements[0])
