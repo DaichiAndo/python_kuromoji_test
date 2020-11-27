@@ -18,7 +18,7 @@ def has_duplicates(seq):
 
 
 # ユーザー定義例外
-class Error(Exception, number_of_lines):
+class Error(Exception):
     print('aaaaa' + number_of_lines)
 
 
