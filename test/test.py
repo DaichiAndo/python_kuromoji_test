@@ -4,6 +4,9 @@ import re
 # 読み込むファイルのパスを変数に追加
 path = os.path.abspath('common.txt')
 
+# 行数を入れる変数
+number_of_lines = 0
+
 # 一つ目の要素を追加する配列
 brand_list = []
 
@@ -22,6 +25,9 @@ class Error(Exception):
 f = open(path)
 lines = f.readlines()
 for line in lines:
+    # 行数を更新
+    number_of_lines += 1
+
     # 改行を削除
     line = line.replace("\n", "")
 
@@ -34,11 +40,11 @@ for line in lines:
     elements[2] = elements[2].lstrip('"')
 
     if len(elements) != 4:
-        raise Error('要素数が不適切です')
+        raise Error('要素数が不適切です @' + number_of_lines)
 
     # ４つ目以外の各要素内のダブルクォートの数を確認（ブランド名にダブルクォートが含まれていないか）：チェックポイント①-2
     if elements[0].count('"') != 0 or elements[1].count('"') != 0 or elements[2].count('"') != 0:
-        raise Error('ダブルクォートの数が不適切です')
+        raise Error('ダブルクォートの数が不適切です @' + number_of_lines)
 
     # 空白数が一致しているかの確認：チェックポイント②
     # ※末尾の空白はカウントしないため削除
@@ -49,7 +55,7 @@ for line in lines:
     elements[2] = re.sub(" +", " ", elements[2])
 
     if elements[1].count(' ') != elements[2].count(' '):
-        raise Error('空白数が不適切です')
+        raise Error('空白数が不適切です @' + number_of_lines)
 
     # １つ目の要素を配列に追加
     brand_list.append(elements[0])
